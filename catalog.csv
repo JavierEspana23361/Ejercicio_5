@@ -1,4 +1,4 @@
-tipo,titulo,nombreorg,fecha,apellido,nombre,volumen,numero,pagi,pagf,url
+tipo,titulo,nombreorg,fecha,apellido,nombre,volumen,numero,pagi,pagf,url,referencia
 revista,Articulo 1,Revista de la Facultad de Ciencias Agrarias,2015,Alvarez,María,1,47,1,10,http://revistas.unc.edu.ar/index.php/RFCA/article/view/11407
 libro,Agronomía básica,Norma,2018,Alvarez,María,1,47,1,10,http://libros.com./index.php/BFCA/book/view/35879
 periodico,Asesian a Humpty Dumpty,La Nación,2022,Juarez,Antonio,,,,,http://lanacion.com./index.php/view/23214

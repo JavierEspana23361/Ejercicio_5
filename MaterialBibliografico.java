@@ -7,58 +7,79 @@
 import java.util.*;
 import java.io.*;
 
-public class MaterialBibliografico {
-    static Catalogo csv = new Catalogo();
-    static String fileName = "example.csv";
 
-    public MaterialBibliografico(String string, String string2, int i, String string3, String string4, String string5) {
+class MaterialBibliografico {
+    private String tipo;
+    private String titulo;
+    private String nombreorg;
+    private String fecha;
+    private String apellido;
+    private String nombre;
+    private String volumen;
+    private String numero;
+    private String pagi;
+    private String pagf;
+    private String url;
+    private String cita;
+
+    public MaterialBibliografico(String tipo, String titulo, String nombreorg, String fecha, String apellido, String nombre, String volumen, String numero, String pagi, String pagf, String url) {
+        this.tipo = tipo;
+        this.titulo = titulo;
+        this.nombreorg = nombreorg;
+        this.fecha = fecha;
+        this.apellido = apellido;
+        this.nombre = nombre;
+        this.volumen = volumen;
+        this.numero = numero;
+        this.pagi = pagi;
+        this.pagf = pagf;
+        this.url = url;
+        generarReferenciaAPA();
+    }
+   
+
+    public String getCita() {
+        return cita;
     }
 
-    public static void main(String[] args) {
-        String tipo;
-        tipo = "xd";
-        if (tipo == "libro"){
-            String cita = /* apellido + ", " + inicial + "." + " (" + año + "). " + titulo + ". " + editorial + ". " + url */"";
+    private void generarReferenciaAPA() {
+        if (tipo.equals("libro")) {
+            cita = apellido + ", " + nombre.charAt(0) + ". (" + fecha + "). " + titulo + ". " + nombreorg + ". " + url;
+        } else if (tipo.equals("periodico")) {
+            cita = apellido + ", " + nombre.charAt(0) + ". (" + fecha + "). " + titulo + ". " + nombreorg + ". " + url;
+        } else if (tipo.equals("tesis")) {
+            cita = apellido + ", " + nombre.charAt(0) + ". (" + fecha + "). " + titulo + ". " + nombreorg + ". " + url;        
+        } else if (tipo.equals("pagina web")) {
+            cita = apellido + ", " + nombre.charAt(0) + ". (" + fecha + "). " + titulo + ". " + nombreorg + ". " + url;
+        } else if (tipo.equals("revista")) {
+            cita = apellido + ", " + nombre.charAt(0) + ". (" + fecha + "). " + titulo + ". " + nombreorg + ". " + volumen + "(" + numero + "), " + pagi + " - " + pagf + ". " + url;
         }
-        else if (tipo == "artículo"){
-            
-        }
-        else if (tipo == "periódico"){
-            String cita = /* apellido + ", " + inicial + "." + " (" + fechapubli + "). " + titular + ". " + nombreperiodic + ". " + url */"";
-        }
-        else if (tipo == "tesis"){
-            String cita = /* apellido + ", " + inicial + "." + " (" + año + "). " + titulo + ". " + institucion + ". " */"";        
-        }
-        else if (tipo == "página web"){
-            String cita = /* apellido + ", " + inicial + "." + " (" + fechapubli + "). " + tituloartículo + ". " + nombresitio + ". " + url */"";
-        }
-        else if (tipo == "revista"){
-            String cita = /* apellido + ", " + inicial + "." + " (" + año + "). " + tituloartículo + ". " + titulorevista + ", " + volumen + "(" + numrevista + "), " + numpaginicio + " - " + numpagfin + ". " + url */"";
-        }
-        savecita(cita);
+        // Implementa lógica para otros tipos de materiales aquí
     }
 
-    public String getNombre() {
-        return null;
-    }
-
-    public String getGénero() {
-        return null;
-    }
-
-    public String getAutor() {
-        return null;
-    }
-
-    public int getAñoPublicacion() {
-        return 0;
-    }
-
-    public char[] toCSVString() {
-        return null;
+    public String toCSVString() {
+        // Implementa la lógica para convertir este objeto en una cadena CSV
+        return tipo + "," + titulo + "," + nombreorg + "," + fecha + "," + apellido + "," + nombre + "," + volumen + "," + numero + "," + pagi + "," + pagf + "," + url + "," + cita;
     }
 
     public static MaterialBibliografico fromCSVString(String line) {
-        return null;
+        String[] parts = line.split(",");
+        String tipo = parts[0];
+        String titulo = parts[1];
+        String nombreorg = parts[2];
+        String fecha = parts[3];
+        String apellido = parts[4];
+        String nombre = parts[5];
+        String volumen = parts[6];
+        String numero = parts[7];
+        String pagi = parts[8];
+        String pagf = parts[9];
+        String url = parts[10];
+
+        MaterialBibliografico material = new MaterialBibliografico(tipo, titulo, nombreorg, fecha, apellido, nombre, volumen, numero, pagi, pagf, url);
+
+        return material;
     }
 }
+
+

@@ -1,0 +1,6 @@
+tipo,titulo,nombreorg,fecha,apellido,nombre,volumen,numero,pagi,pagf,url,null
+revista,Articulo 1,Revista de la Facultad de Ciencias Agrarias,2015,Alvarez,María,1,47,1,10,http://revistas.unc.edu.ar/index.php/RFCA/article/view/11407,Alvarez, M. (2015). Articulo 1. Revista de la Facultad de Ciencias Agrarias. 1(47), 1 - 10. http://revistas.unc.edu.ar/index.php/RFCA/article/view/11407
+libro,Agronomía básica,Norma,2018,Alvarez,María,1,47,1,10,http://libros.com./index.php/BFCA/book/view/35879,Alvarez, M. (2018). Agronomía básica. Norma. http://libros.com./index.php/BFCA/book/view/35879
+periodico,Asesian a Humpty Dumpty,La Nación,2022,Juarez,Antonio,,,,,http://lanacion.com./index.php/view/23214,Juarez, A. (2022). Asesian a Humpty Dumpty. La Nación. http://lanacion.com./index.php/view/23214
+pagina web,Escandalo: Humpty Dumpty es un huevo,NovedadesHoy,2022,Camino,Fernando,,,,,http://novedadeshoy.com./index.php/escandalo_humpty_dumpty_es_un_huevo,Camino, F. (2022). Escandalo: Humpty Dumpty es un huevo. NovedadesHoy. http://novedadeshoy.com./index.php/escandalo_humpty_dumpty_es_un_huevo
+tesis,El huevo y la gallina,UNC,2022,Barreda,Roberto,,,,,http://tesis.unc.edu.ar./index.php/tesis/view/12345,Barreda, R. (2022). El huevo y la gallina. UNC. http://tesis.unc.edu.ar./index.php/tesis/view/12345
